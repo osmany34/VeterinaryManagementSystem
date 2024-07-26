@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Repository
-public interface VaccineRepo extends JpaRepository<Vaccine, Long> {
+public interface VaccineRepository extends JpaRepository<Vaccine, Long> {
 
     List<Vaccine> findByAnimalId(Long animalId);
 

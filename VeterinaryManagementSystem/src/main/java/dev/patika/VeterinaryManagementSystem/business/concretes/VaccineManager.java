@@ -4,7 +4,7 @@ import dev.patika.VeterinaryManagementSystem.business.abstracts.IVaccineService;
 import dev.patika.VeterinaryManagementSystem.core.result.Result;
 import dev.patika.VeterinaryManagementSystem.core.result.ResultData;
 import dev.patika.VeterinaryManagementSystem.core.utilities.ResultInfo;
-import dev.patika.VeterinaryManagementSystem.dao.VaccineRepo;
+import dev.patika.VeterinaryManagementSystem.dao.VaccineRepository;
 import dev.patika.VeterinaryManagementSystem.dto.converter.AnimalConverter;
 import dev.patika.VeterinaryManagementSystem.dto.converter.VaccineConverter;
 import dev.patika.VeterinaryManagementSystem.dto.request.vaccine.VaccineSaveRequest;
@@ -21,11 +21,11 @@ import java.util.stream.Collectors;
 @Service
 public class VaccineManager implements IVaccineService {
 
-    private final VaccineRepo vaccineRepo;
+    private final VaccineRepository vaccineRepo;
     private final AnimalManager animalManager;
     private final VaccineConverter vaccineConverter;
 
-    public VaccineManager(VaccineRepo vaccineRepo, AnimalManager animalManager, VaccineConverter vaccineConverter, AnimalConverter animalConverter) {
+    public VaccineManager(VaccineRepository vaccineRepo, AnimalManager animalManager, VaccineConverter vaccineConverter, AnimalConverter animalConverter) {
         this.vaccineRepo = vaccineRepo;
         this.animalManager = animalManager;
         this.vaccineConverter = vaccineConverter;

@@ -14,14 +14,12 @@ public interface IAnimalService {
 
     ResultData<AnimalResponse> updateAnimal(AnimalUpdateRequest animalUpdateRequest);
 
-
     ResultData<AnimalResponse> findAnimalById(Long id);
 
     ResultData<List<AnimalResponse>> findAnimalByName(String name);
 
     ResultData<List<AnimalResponse>> findAllAnimals();
 
-    // Deletes an animal by its ID
     Result deleteAnimal(Long id);
 
     ResultData<List<AnimalResponse>> findByCustomerId(Long customerId);

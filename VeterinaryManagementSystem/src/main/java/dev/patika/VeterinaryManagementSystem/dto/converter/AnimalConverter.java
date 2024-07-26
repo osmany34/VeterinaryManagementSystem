@@ -1,7 +1,7 @@
 package dev.patika.VeterinaryManagementSystem.dto.converter;
 
 
-import dev.patika.VeterinaryManagementSystem.dao.CustomerRepo;
+import dev.patika.VeterinaryManagementSystem.dao.CustomerRepository;
 import dev.patika.VeterinaryManagementSystem.dto.request.animal.AnimalSaveRequest;
 import dev.patika.VeterinaryManagementSystem.dto.request.animal.AnimalUpdateRequest;
 import dev.patika.VeterinaryManagementSystem.dto.response.AnimalResponse;
@@ -12,18 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class AnimalConverter {
 
-    private final CustomerRepo customerRepo;
+    private final CustomerRepository customerRepo;
 
-    public AnimalConverter(CustomerRepo customerRepo) {
+    public AnimalConverter(CustomerRepository customerRepo) {
         this.customerRepo = customerRepo;
     }
 
-    /**
-     * Converts an AnimalSaveRequest object to an Animal entity.
-     *
-     * @param animalSaveRequest The AnimalSaveRequest object to convert.
-     * @return The converted Animal entity.
-     */
     public Animal convertToAnimal(AnimalSaveRequest animalSaveRequest) {
         if (animalSaveRequest == null) {
             return null;
@@ -40,12 +34,7 @@ public class AnimalConverter {
         return animal;
     }
 
-    /**
-     * Converts an AnimalUpdateRequest object to an Animal entity.
-     *
-     * @param animalUpdateRequest The AnimalUpdateRequest object to convert.
-     * @return The converted Animal entity.
-     */
+
     public Animal convertToUpdateAnimal(AnimalUpdateRequest animalUpdateRequest) {
         if (animalUpdateRequest == null) {
             return null;
@@ -63,12 +52,6 @@ public class AnimalConverter {
         return animal;
     }
 
-    /**
-     * Converts an Animal entity to an AnimalResponse object.
-     *
-     * @param animal The Animal entity to convert.
-     * @return The converted AnimalResponse object.
-     */
     public AnimalResponse toAnimalResponse(Animal animal) {
         if (animal == null) {
             return null;

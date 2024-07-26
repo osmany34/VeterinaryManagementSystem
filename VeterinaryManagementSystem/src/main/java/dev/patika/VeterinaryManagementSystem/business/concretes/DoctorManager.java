@@ -4,7 +4,7 @@ import dev.patika.VeterinaryManagementSystem.business.abstracts.IDoctorService;
 import dev.patika.VeterinaryManagementSystem.core.result.Result;
 import dev.patika.VeterinaryManagementSystem.core.result.ResultData;
 import dev.patika.VeterinaryManagementSystem.core.utilities.ResultInfo;
-import dev.patika.VeterinaryManagementSystem.dao.DoctorRepo;
+import dev.patika.VeterinaryManagementSystem.dao.DoctorRepository;
 import dev.patika.VeterinaryManagementSystem.dto.converter.DoctorConverter;
 import dev.patika.VeterinaryManagementSystem.dto.request.doctor.DoctorSaveRequest;
 import dev.patika.VeterinaryManagementSystem.dto.request.doctor.DoctorUpdateRequest;
@@ -20,9 +20,9 @@ import java.util.stream.Collectors;
 public class DoctorManager implements IDoctorService {
 
     private final DoctorConverter doctorConverter;
-    private final DoctorRepo doctorRepo;
+    private final DoctorRepository doctorRepo;
 
-    public DoctorManager(DoctorConverter converter, DoctorRepo doctorRepo) {
+    public DoctorManager(DoctorConverter converter, DoctorRepository doctorRepo) {
         this.doctorConverter = converter;
         this.doctorRepo = doctorRepo;
     }

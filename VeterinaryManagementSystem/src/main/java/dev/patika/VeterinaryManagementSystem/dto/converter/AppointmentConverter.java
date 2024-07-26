@@ -2,7 +2,7 @@ package dev.patika.VeterinaryManagementSystem.dto.converter;
 
 
 import dev.patika.VeterinaryManagementSystem.dao.AnimalRepository;
-import dev.patika.VeterinaryManagementSystem.dao.DoctorRepo;
+import dev.patika.VeterinaryManagementSystem.dao.DoctorRepository;
 import dev.patika.VeterinaryManagementSystem.dto.request.appointment.AppointmentSaveRequest;
 import dev.patika.VeterinaryManagementSystem.dto.request.appointment.AppointmentUpdateRequest;
 import dev.patika.VeterinaryManagementSystem.dto.response.AppointmentResponse;
@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
 @Component
 public class AppointmentConverter {
     private final AnimalRepository animalRepo;
-    private final DoctorRepo doctorRepo;
+    private final DoctorRepository doctorRepo;
 
-    public AppointmentConverter(AnimalRepository animalRepo, DoctorRepo doctorRepo) {
+    public AppointmentConverter(AnimalRepository animalRepo, DoctorRepository doctorRepo) {
         this.animalRepo = animalRepo;
         this.doctorRepo = doctorRepo;
     }

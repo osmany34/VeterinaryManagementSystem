@@ -9,11 +9,6 @@ import dev.patika.VeterinaryManagementSystem.entities.Animal;
 import dev.patika.VeterinaryManagementSystem.entities.Vaccine;
 import org.springframework.stereotype.Component;
 
-/**
- * The VaccineConverter class provides methods to convert between different representations of vaccine data.
- * It includes methods for converting VaccineSaveRequest and VaccineUpdateRequest objects to Vaccine entities,
- * as well as converting Vaccine entities to VaccineResponse objects.
- */
 @Component
 public class VaccineConverter {
     private final AnimalRepository animalRepo;
@@ -22,12 +17,7 @@ public class VaccineConverter {
         this.animalRepo = animalRepo;
     }
 
-    /**
-     * Converts a VaccineSaveRequest object to a Vaccine entity.
-     *
-     * @param vaccineSaveRequest The VaccineSaveRequest object to convert.
-     * @return The converted Vaccine entity.
-     */
+
     public Vaccine convertToVaccine(VaccineSaveRequest vaccineSaveRequest) {
         if (vaccineSaveRequest == null) {
             return null;
@@ -42,12 +32,6 @@ public class VaccineConverter {
         return vaccine;
     }
 
-    /**
-     * Converts a VaccineUpdateRequest object to a Vaccine entity.
-     *
-     * @param vaccineUpdateRequest The VaccineUpdateRequest object to convert.
-     * @return The converted Vaccine entity.
-     */
     public Vaccine convertToUpdateVaccine(VaccineUpdateRequest vaccineUpdateRequest) {
         if (vaccineUpdateRequest == null) {
             return null;
@@ -63,12 +47,6 @@ public class VaccineConverter {
         return vaccine;
     }
 
-    /**
-     * Converts a Vaccine entity to a VaccineResponse object.
-     *
-     * @param vaccine The Vaccine entity to convert.
-     * @return The converted VaccineResponse object.
-     */
     public VaccineResponse toVaccineResponse(Vaccine vaccine) {
         if (vaccine == null) {
             return null;

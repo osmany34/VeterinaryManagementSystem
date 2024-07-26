@@ -4,7 +4,7 @@ import dev.patika.VeterinaryManagementSystem.business.abstracts.ICustomerService
 import dev.patika.VeterinaryManagementSystem.core.result.Result;
 import dev.patika.VeterinaryManagementSystem.core.result.ResultData;
 import dev.patika.VeterinaryManagementSystem.core.utilities.ResultInfo;
-import dev.patika.VeterinaryManagementSystem.dao.CustomerRepo;
+import dev.patika.VeterinaryManagementSystem.dao.CustomerRepository;
 import dev.patika.VeterinaryManagementSystem.dto.converter.CustomerConverter;
 import dev.patika.VeterinaryManagementSystem.dto.request.customer.CustomerSaveRequest;
 import dev.patika.VeterinaryManagementSystem.dto.request.customer.CustomerUpdateRequest;
@@ -19,10 +19,10 @@ import java.util.stream.Collectors;
 @Service
 public class CustomerManager implements ICustomerService {
 
-    private final CustomerRepo customerRepo;
+    private final CustomerRepository customerRepo;
     private final CustomerConverter customerConverter;
 
-    public CustomerManager(CustomerRepo customerRepo, CustomerConverter customerConverter) {
+    public CustomerManager(CustomerRepository customerRepo, CustomerConverter customerConverter) {
         this.customerRepo = customerRepo;
         this.customerConverter = customerConverter;
     }

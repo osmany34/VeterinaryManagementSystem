@@ -5,7 +5,6 @@ import dev.patika.VeterinaryManagementSystem.core.result.Result;
 import dev.patika.VeterinaryManagementSystem.core.result.ResultData;
 import dev.patika.VeterinaryManagementSystem.dto.request.customer.CustomerSaveRequest;
 import dev.patika.VeterinaryManagementSystem.dto.request.customer.CustomerUpdateRequest;
-import dev.patika.VeterinaryManagementSystem.dto.response.AnimalResponse;
 import dev.patika.VeterinaryManagementSystem.dto.response.CustomerResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
