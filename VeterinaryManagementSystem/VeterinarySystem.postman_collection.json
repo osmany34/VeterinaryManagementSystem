@@ -11,9 +11,33 @@
 			"item": [
 				{
 					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Charlie\",\r\n    \"species\": \"Kedi\",\r\n    \"breed\": \"Siyam\",\r\n    \"gender\": \"Erkek\",\r\n    \"colour\": \"Krem\",\r\n    \"dateOfBirth\": \"2022-01-01\",\r\n    \"customerId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal"
+							]
+						}
 					},
 					"response": []
 				},
@@ -21,7 +45,28 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"name\": \"Paşa\",\r\n            \"species\": \"Köpek\",\r\n            \"breed\": \"Kangal\",\r\n            \"gender\": \"Erkek\",\r\n            \"colour\": \"Beyaz\",\r\n            \"dateOfBirth\": \"2019-08-04\",\r\n            \"customerId\": 10\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal"
+							]
+						}
 					},
 					"response": []
 				},
@@ -29,7 +74,29 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Charlie\",\r\n    \"species\": \"Kedi\",\r\n    \"breed\": \"Siyam\",\r\n    \"gender\": \"Erkek\",\r\n    \"colour\": \"Krem\",\r\n    \"dateOfBirth\": \"2022-01-01\",\r\n    \"customerId\": 9\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -37,7 +104,21 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/animal/id/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal",
+								"id",
+								"10"
+							]
+						}
 					},
 					"response": []
 				},
@@ -45,7 +126,20 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/animal/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal",
+								"8"
+							]
+						}
 					},
 					"response": []
 				},
@@ -53,7 +147,21 @@
 					"name": "customerAnimals",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/animal/customer/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal",
+								"customer",
+								"10"
+							]
+						}
 					},
 					"response": []
 				},
@@ -61,7 +169,21 @@
 					"name": "nameAnimal",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/animal/name/Boncuk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"animal",
+								"name",
+								"Boncuk"
+							]
+						}
 					},
 					"response": []
 				}
@@ -74,7 +196,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment"
+							]
+						}
 					},
 					"response": []
 				},
@@ -82,7 +216,29 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointmentDateTime\": \"2024-08-08T08:00:00\",\r\n    \"animalId\": 1,\r\n    \"doctorId\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment",
+								"create"
+							]
+						}
 					},
 					"response": []
 				},
@@ -90,7 +246,28 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"appointmentDate\": \"2024-08-01T08:00:00\",\r\n        \"animalId\": 1,\r\n        \"doctorId\": 5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment"
+							]
+						}
 					},
 					"response": []
 				},
@@ -98,7 +275,20 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -106,7 +296,19 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment"
+							]
+						}
 					},
 					"response": []
 				},
@@ -114,7 +316,34 @@
 					"name": "appointmentsByDateAndAnimal",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment/appointmentsByDateAndAnimal?start=2024-08-08&end=2024-08-08&animalId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment",
+								"appointmentsByDateAndAnimal"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2024-08-08"
+								},
+								{
+									"key": "end",
+									"value": "2024-08-08"
+								},
+								{
+									"key": "animalId",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -122,7 +351,38 @@
 					"name": "appointmentsByDateAndDoctor",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/appointment/appointmentsByDateAndDoctor?&start=2024-08-02&end=2024-08-02&doctorId=1\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"appointment",
+								"appointmentsByDateAndDoctor"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "start",
+									"value": "2024-08-02"
+								},
+								{
+									"key": "end",
+									"value": "2024-08-02"
+								},
+								{
+									"key": "doctorId",
+									"value": "1\n"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -135,7 +395,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/availableDate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"availableDate"
+							]
+						}
 					},
 					"response": []
 				},
@@ -143,7 +415,28 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"availableDate\": \"2024-08-10T12:00\",\r\n        \"doctorId\": 7\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/availableDate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"availableDate"
+							]
+						}
 					},
 					"response": []
 				},
@@ -151,7 +444,28 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n            \"id\": 2,\r\n            \"availableDate\": \"2024-08-08T10:20:00\",\r\n            \"doctorId\": 3\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/availableDate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"availableDate"
+							]
+						}
 					},
 					"response": []
 				},
@@ -159,7 +473,20 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/availableDate/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"availableDate",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -167,7 +494,20 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/availableDate/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"availableDate",
+								"10"
+							]
+						}
 					},
 					"response": []
 				}
@@ -180,7 +520,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer"
+							]
+						}
 					},
 					"response": []
 				},
@@ -188,7 +540,28 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"name\": \"Merve Taş\",\r\n        \"phone\": \"+902121010101\",\r\n        \"address\": \"Tepebaşı mah. No:11\",\r\n        \"mail\": \"mervetas@example.com\",\r\n        \"city\": \"Eskişehir\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer"
+							]
+						}
 					},
 					"response": []
 				},
@@ -196,7 +569,28 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n            \"id\": 3,\r\n            \"name\": \"Ayşe\",\r\n            \"phone\": \"+902122222222\",\r\n            \"address\": \"Çankaya mah. No:5\",\r\n            \"mail\": \"ayseyildiz@example.com\",\r\n            \"city\": \"Ankara\"}\r\n        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer"
+							]
+						}
 					},
 					"response": []
 				},
@@ -204,7 +598,20 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/customer/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer",
+								"10"
+							]
+						}
 					},
 					"response": []
 				},
@@ -212,7 +619,20 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/customer/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer",
+								"7"
+							]
+						}
 					},
 					"response": []
 				},
@@ -220,7 +640,21 @@
 					"name": "customerName",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/customer/name/Ayşe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customer",
+								"name",
+								"Ayşe"
+							]
+						}
 					},
 					"response": []
 				}
@@ -233,7 +667,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctor"
+							]
+						}
 					},
 					"response": []
 				},
@@ -241,7 +687,28 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ubeydullah Kaya\",\r\n    \"phone\": \"+905432109876\",\r\n    \"mail\": \"ubeydullah.kaya@example.com\",\r\n    \"address\": \"Gölbaşı Caddesi No:78\",\r\n    \"city\": \"Adıyaman\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctor"
+							]
+						}
 					},
 					"response": []
 				},
@@ -249,7 +716,28 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 9,\r\n        \"name\": \"Dr. Melisa Çelik\",\r\n        \"phone\": \"+12345567898\",\r\n        \"mail\": \"melisa.celik@example.com\",\r\n        \"address\": \"Beylikbağı, Gebze\",\r\n        \"city\": \"Kocaeli\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctor"
+							]
+						}
 					},
 					"response": []
 				},
@@ -257,7 +745,20 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctor",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -265,7 +766,20 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/doctor/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctor",
+								"8"
+							]
+						}
 					},
 					"response": []
 				}
@@ -278,7 +792,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine"
+							]
+						}
 					},
 					"response": []
 				},
@@ -286,7 +812,28 @@
 					"name": "create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Köpek Alerji Aşısı\",\r\n        \"code\": \"ALR001\",\r\n        \"protectionStartDate\": \"2021-05-10\",\r\n        \"protectionFinishDate\": \"2022-05-10\",\r\n        \"animalId\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine"
+							]
+						}
 					},
 					"response": []
 				},
@@ -294,7 +841,28 @@
 					"name": "update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n            \"id\": 9,\r\n            \"name\": \"Köpek Burun Akıntısı Aşısı\",\r\n            \"code\": \"CAV002\",\r\n            \"protectionStartDate\": \"2022-05-15\",\r\n            \"protectionFinishDate\": \"2023-05-15\",\r\n            \"animalId\": 9\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine"
+							]
+						}
 					},
 					"response": []
 				},
@@ -302,7 +870,21 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine/animal/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine",
+								"animal",
+								"5"
+							]
+						}
 					},
 					"response": []
 				},
@@ -310,7 +892,20 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine",
+								"10"
+							]
+						}
 					},
 					"response": []
 				},
@@ -318,7 +913,42 @@
 					"name": "animalId",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine/animal/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine",
+								"animal",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vaccineId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/vaccine/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"vaccine",
+								"5"
+							]
+						}
 					},
 					"response": []
 				}
